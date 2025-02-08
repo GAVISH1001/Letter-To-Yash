@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope" id="envelope">
+            <p>Tap to Open</p>
+        </div>
+        <div class="letter" id="letter">
+            <p><strong>Dear Yash,</strong></p>
+            <p>There aren’t enough words in the world to tell you how much you mean to me, but I’ll try anyway—I love you. Not in a small, fleeting way, but in a way that fills every corner of my heart. In a way that makes me want to hold your hand through every storm, every sunrise, every quiet moment in between.</p>
+            <p>Life is unpredictable. It twists, it turns, it throws things at us that we never see coming. But no matter what happens, I am here. Through the laughter and the tears, through the moments that make us feel weightless and the ones that press heavy on our shoulders. I will never leave your side.</p>
+            <p>You are not alone, Yash. You will never be alone. I will be the arms you can fall into when the world feels unkind, the voice that reminds you of your strength when you forget it yourself. And on the days when everything feels too much, I will sit with you in the quiet, hand in yours, heart in yours, until the weight feels lighter again.</p>
+            <p>You are loved. You are enough. And you will always, always have me.</p>
+            <p>Forever yours,</p>
+            <p>Gavish</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

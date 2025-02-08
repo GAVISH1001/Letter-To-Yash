@@ -1,0 +1,53 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class InteractiveLetter {
+    public static void main(String[] args) {
+        // Create the frame
+        JFrame frame = new JFrame("Interactive Letter");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 500);
+
+        // Create a container panel
+        JPanel container = new JPanel();
+        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+        frame.add(container);
+
+        // Create envelope button
+        JButton envelopeButton = new JButton("Tap to Open");
+        envelopeButton.setFont(new Font("Arial", Font.BOLD, 16));
+        envelopeButton.setBackground(new Color(241, 196, 15)); // Yellow background
+        envelopeButton.setPreferredSize(new Dimension(250, 150));
+        envelopeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        container.add(envelopeButton);
+
+        // Create the letter area (initially hidden)
+        JTextArea letterArea = new JTextArea();
+        letterArea.setText("Dear Yash,\n\n" +
+                "There aren’t enough words in the world to tell you how much you mean to me, but I’ll try anyway—I love you. Not in a small, fleeting way, but in a way that fills every corner of my heart. In a way that makes me want to hold your hand through every storm, every sunrise, every quiet moment in between.\n\n" +
+                "Life is unpredictable. It twists, it turns, it throws things at us that we never see coming. But no matter what happens, I am here. Through the laughter and the tears, through the moments that make us feel weightless and the ones that press heavy on our shoulders. I will never leave your side.\n\n" +
+                "You are not alone, Yash. You will never be alone. I will be the arms you can fall into when the world feels unkind, the voice that reminds you of your strength when you forget it yourself. And on the days when everything feels too much, I will sit with you in the quiet, hand in yours, heart in yours, until the weight feels lighter again.\n\n" +
+                "You are loved. You are enough. And you will always, always have me.\n\n" +
+                "Forever yours,\n" +
+                "Gavish");
+        letterArea.setFont(new Font("Arial", Font.PLAIN, 14));
+        letterArea.setEditable(false);
+        letterArea.setVisible(false); // Initially hidden
+        letterArea.setPreferredSize(new Dimension(300, 350));
+        letterArea.setAlignmentX(Component.CENTER_ALIGNMENT);
+        container.add(letterArea);
+
+        // Add action listener to the envelope button to "open" the letter
+        envelopeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                letterArea.setVisible(true);  // Show the letter
+                envelopeButton.setEnabled(false);  // Disable the envelope button
+            }
+        });
+
+        // Display the frame
+        frame.setVisible(true);
+    }
+}
